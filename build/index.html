@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="external/lightbox2/css/lightbox.min.css">
         <link rel="stylesheet" href="css/style.css?v=1">
         <!--[if IE]>
     <link rel="icon" href="favicon.ico"><![endif]-->
@@ -35,24 +36,55 @@
         <meta name="twitter:image" content="">
         <meta name="twitter:url" content=""> </head>
     <body>
+        <img class="top__bg-img" src="images/bg-img.jpg" alt="">
         <main>
-            <section class="comments-section">
-                <div class="wrapper"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolor debitis est pariatur esse, earum fugiat? Accusantium repudiandae necessitatibus laboriosam, voluptatibus, labore corrupti quibusdam cum quos repellat perspiciatis similique,
-                    illo!
-                    <div class="article">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-user"></i>
-                        <i class="fa fa-clock-o"></i>
-                        <i class="fa fa-comment"></i>
-                        <i class="fa fa-pencil-square-o"></i>
-                        <i class="fa fa-times"></i>
-                        <i class="fa fa-reply"></i>
-                        <h1>The Road to Home</h1>
+            <div class="wrapper">
+                <section class="section top-section article-section">
+                    <article class="article">
+                        <div class="featured-box" title="Featured article">
+                            <div class="featured-box__circle">
+                                <i class="fa fa-star featured-box__star"></i>
+                            </div>
+                        </div>
+                        <h1 class="article__heading">The Road to Home</h1>
+                        <div class="article__date">June 18, 2015</div>
                         <p>Made last it seen went no just when of by. Occasional entreaties comparison me difficulty so themselves. At brother inquiry of offices without do my service. As particular to companions at sentiments. Weather however luckily enquire
-                            so certain do. Aware did stood was day under ask. Dearest affixed enquire on explain opinion he. Reached who the mrs joy offices pleased. Towards did colonel article any parties. </p>
+                            so certain do. Aware did stood was day under ask. Dearest affixed enquire on explain opinion he. Reached who the mrs joy offices pleased. Towards did colonel article any parties.</p>
+                        <p class="with-img img--left">
+                            <a class="float-link" href="images/content-img-1-original.jpg" data-lightbox="content-img-1" data-title="A beautiful image">
+                                <img class="float-img" src="images/content-img-1-small.jpg" alt="Long road and sky" title="A beautiful image">
+                            </a>Needed feebly dining oh talked wisdom oppose at. Applauded use attempted strangers now are middleton concluded had. It is tried no added purse shall no on truth. Pleased anxious or as in by viewing forbade minutes prevent.
+                            Too leave had those get being led weeks blind. Had men rose from down lady able. Its son him ferrars proceed six parlors. Her say projection age announcing decisively men. Few gay sir those green men timed downs widow chief.
+                            Prevailed remainder may propriety can and. Now for manners use has company believe parlors. Least nor party who wrote while did.</p>
+                        <p>We diminution preference thoroughly if. Joy deal pain view much her time. Led young gay would now state. Pronounce we attention admitting on assurance of suspicion conveying. That his west quit had met till. Of advantage he attending
+                            household at do perceived. Middleton in objection discovery as agreeable. Edward thrown dining so he my around to.</p>
+                        <p>Sense child do state to defer mr of forty. Become latter but nor abroad wisdom waited. Was delivered gentleman acuteness but daughters. In as of whole as match asked. Pleasure exertion put add entrance distance drawings. In equally
+                            matters showing greatly it as. Want name any wise are able park when. Saw vicinity judgment remember finished men throwing.</p>
+                        <p>Too leave had those get being led weeks blind. Had men rose from down lady able. Its son him ferrars proceed six parlors. Her say projection age announcing decisively men. </p>
+                        <div class="article-info">
+                            <span>Post by Will Smith</span>
+                            <span>Posted June 18, 2015</span>
+                            <span>12 comments</span>
+                        </div>
+                    </article>
+                    <div class="comments-wrap">
+                        <p>Leave comment:</p>
+                        <form action="#">
+                            <textarea id="textarea" name="" cols="30" rows="10"></textarea>
+                            <button type="submit">Send</button>
+                        </form>
                     </div>
-                </div>
-            </section>
+                    <i class="fa fa-user"></i>
+                    <i class="fa fa-clock-o"></i>
+                    <i class="fa fa-comment"></i>
+                    <i class="fa fa-pencil-square-o"></i>
+                    <i class="fa fa-times"></i>
+                    <i class="fa fa-reply"></i>
+                </section>
+            </div>
         </main>
+        <script src="external/jquery/jquery.js"></script>
+        <script src="external/lightbox2/js/lightbox.min.js"></script>
+        <script src="js/application.js"></script>
     </body>
 </html>

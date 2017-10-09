@@ -1,20 +1,65 @@
+/* Reset START */
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+
+
+/* Reset END */
+
+
 /* Font-Face START */
+
 @font-face {
   font-family: 'Stag';
   src: url('../fonts/Stag-Book.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Stag';
   src: url('../fonts/Stag-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Stag';
   src: url('../fonts/Stag-Semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
+
+
+
+
+
+
 /* Font-Face END */
+
+
+/* Colors START */
+
+$default: #454545;
+$gray: #b6b6b6;
+$separator: #f2f2f2;
+$accent: #f1c40f;
+
+
+
+
+/* Colors END */
