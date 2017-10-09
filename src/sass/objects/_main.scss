@@ -8,6 +8,19 @@ body {
 h1,
 h2 {
   font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 .comments-section {}
+
+.content {
+  p {
+    margin: 0
+  }
+}
