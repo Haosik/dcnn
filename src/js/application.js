@@ -207,12 +207,13 @@ $(document).ready(function() {
 
   //Edit comment
   var editComment = function(id, text) {
+    console.log(id);
+    console.log(text);
     ajaxRequest({
       url: ajaxUrl + id,
-      method: 'POST',
+      method: 'PUT',
       data: {
         content: text,
-        _method: 'PUT'
       },
       callback: function(respData) {
         console.log(JSON.parse(respData));
@@ -235,7 +236,7 @@ $(document).ready(function() {
   $('body').on('click', '.one-comment__edit-confirm', function(e) {
     e.preventDefault();
     var commentId = $(this).closest('.one-comment__right-wrap').find('input[name="commentId"]').val();
-    var text = $(this).closest('.one-comment__info').find('.one-comment__textarea').text;
+    var text = $(this).closest('.one-comment__info').find('.one-comment__textarea').val();
 
     editComment(commentId, text);
     $('.all-comments__wrap').html("");
