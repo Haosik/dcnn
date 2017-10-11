@@ -166,8 +166,8 @@ p.with-img {
   &__item {
     display: inline-block;
     vertical-align: middle;
-    padding-left: 3px;
-    padding-right: 50px;
+    margin-left: 2px;
+    margin-right: 50px;
   }
   &__icon {
     padding-right: 3px;
@@ -185,7 +185,7 @@ p.with-img {
 
 .leave-comment {
   &__heading {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     padding: 12px 0;
     font-size: 30px;
     line-height: 30px;
@@ -224,12 +224,15 @@ p.with-img {
   vertical-align: top;
   width: 68px;
   height: 68px;
+  line-height: 60px;
   padding: 2px;
+  text-align: center;
   border: 2px solid #ebedee;
   border-radius: 6px;
   &.avatar--big {
     width: 88px;
     height: 88px;
+    line-height: 80px;
   }
   img {
     display: inline-block;
@@ -239,7 +242,7 @@ p.with-img {
 }
 
 .send-btn__wrap {
-  padding: 10px 0;
+  padding: 11px 0;
   text-align: right;
   .send-btn {
     position: relative;
@@ -268,8 +271,203 @@ p.with-img {
       background-color: rgba(255, 255, 255, 0.3);
       transition: width 0.2s ease-out;
     }
-    &:hover:before {
+    &:hover:before,
+    &:focus:before {
       width: 100%;
+    }
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+.one-comment {
+  &__wrap {
+    margin: 40px 0;
+  }
+  &__box {
+
+    font-size: 0;
+  }
+  &__avatar-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 14%;
+    font-size: 17px;
+  }
+  &__right-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 86%;
+    font-size: 17px;
+  }
+  &__date-wrap {
+    color: $gray;
+  }
+  &__info {
+    &-top {
+      line-height: 19px;
+    }
+    &-middle {
+      display: table;
+    }
+    &-bottom {
+      font-size: 15px;
+      line-height: 21px;
+      color: $gray;
+    }
+    &-item {
+      display: inline-block;
+      vertical-align: top;
+      padding-right: 10px;
+      font-size: 15px;
+      line-height: 18px;
+      border: none;
+      color: $gray;
+      background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      &:hover,
+      &:focus {
+        color: $default;
+        outline: none;
+      }
+      .fa {
+        margin-right: 3px;
+      }
+    }
+  }
+  &__date-wrap {
+    font-size: 15px;
+  }
+  &__text {
+    display: table-cell;
+    vertical-align: middle;
+    height: 46px;
+  }
+}
+
+.comment-top {
+  &__item {
+    display: inline-block;
+    vertical-align: baseline;
+    padding-right: 10px;
+  }
+}
+
+.one-answer {
+  &__wrap {
+    margin-top: 30px;
+    font-size: 0;
+    /*&:first-child {
+      margin-top: 20px;
+    }*/
+  }
+  &__avatar-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 14%;
+    font-size: 17px;
+  }
+  &__right-wrap {
+    display: inline-block;
+    vertical-align: top;
+    width: 86%;
+    font-size: 17px;
+  }
+  &__info-top {
+    line-height: 21px;
+  }
+  &__info-middle {
+    display: table;
+  }
+  &__whom {
+    font-size: 15px;
+    color: $gray;
+    .fa-reply {
+      transform: rotateY(180deg);
+    }
+  }
+  &__date-wrap {
+    font-size: 15px;
+    color: $gray;
+  }
+  &__text {
+    display: table-cell;
+    vertical-align: middle;
+    height: 44px;
+  }
+}
+
+.answer-top {
+  &__item {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 5px;
+  }
+}
+
+
+// That strange 20px margin-top only on the first answer in comments
+.all-comments__wrap .one-comment__wrap:first-child .one-answer__wrap:first-child {
+  margin-top: 20px;
+}
+
+.load-more {
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+    text-align: center;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      width: calc(50% - 100px);
+      height: 2px;
+      margin-top: 4px;
+      background-color: #f2f2f2;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+  &__btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: 182px;
+    color: $gray;
+    font-size: 16px;
+    border: 2px solid #f2f2f2;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 0;
+      background-color: #ffd800;
+      transition: height 0.2s ease-in;
+    }
+    &:hover:before,
+    &:focus:before {
+      height: 100%;
+    }
+    &:active {
+      transform: translateY(1px);
     }
   }
 }
