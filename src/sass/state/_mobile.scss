@@ -1,3 +1,49 @@
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+  .top-section {
+    margin-top: -50px;
+    padding: 35px 25px;
+  }
+  .one-answer__avatar-wrap {
+    float: left;
+    width: 73px;
+    margin-right: -73px;
+  }
+  .one-answer__right-wrap {
+    float: right;
+    width: 100%;
+    padding-left: 73px;
+  }
+  .article-info__item {
+    display: block;
+    margin-right: 0;
+  }
+  .answers-wrap {
+    margin-left: -72px;
+  }
+  .featured-box {
+    top: 5px;
+    left: 50%;
+    margin-left: -16px;
+  }
+  p.with-img.img--left .float-link,
+  p.with-img.img--right .float-link {
+    margin: 5px;
+  }
+  .leave-comment__heading {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .leave-comment__avatar-wrap {
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .leave-comment__textarea {
+    display: block;
+    width: 100%;
+  }
+  .send-btn__wrap {
+    text-align: center;
+  }
+}
 
 @media screen and (max-width: 480px) {}

@@ -40,6 +40,12 @@ img {
   border: none;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .bolder {
   font-weight: 500;
 }
@@ -102,7 +108,7 @@ p {
   &__circle {
     width: 32px;
     height: 32px;
-    line-height: 22px;
+    line-height: 24px;
     text-align: center;
     border: 4px solid #ffd800;
     border-radius: 50%;
