@@ -98,7 +98,7 @@
                             <textarea class="leave-comment__textarea" name="newCommentText" placeholder="Your Message"></textarea>
                             <input type="hidden" name="nickName" value="noobbaster">
                             <div class="send-btn__wrap">
-                                <button class="send-btn" type="submit">Send</button>
+                                <button class="send-btn accent-btn" type="submit">Send</button>
                             </div>
                         </form>
                         <div class="all-comments__wrap">
@@ -110,6 +110,7 @@
                                         </div>
                                     </div>
                                     <div class="one-comment__right-wrap">
+                                        <input type="hidden" name="commentId" value="">
                                         <div class="one-comment__info">
                                             <div class="one-comment__info-top">
                                                 <div class="comment-top__item one-comment__author bolder">Kurt Thompson</div>
@@ -122,6 +123,11 @@
                                             </div>
                                             <div class="one-comment__info-middle">
                                                 <div class="one-comment__text">If not everyone makes money blogging, why is blogging so popular?</div>
+                                                <textarea class="one-comment__textarea hidden">If not everyone makes money blogging, why is blogging so popular?</textarea>
+                                                <div class="one-comment__edit-items hidden">
+                                                    <button class="one-comment__edit-cancel">&#10005; Cancel</button>
+                                                    <button class="one-comment__edit-confirm accent-btn">Save</button>
+                                                </div>
                                             </div>
                                             <div class="one-comment__info-bottom">
                                                 <button class="one-comment__edit-wrap one-comment__info-item">
@@ -226,6 +232,7 @@
                                         </div>
                                     </div>
                                     <div class="one-comment__right-wrap">
+                                        <input type="hidden" name="commentId" value="">
                                         <div class="one-comment__info">
                                             <div class="one-comment__info-top">
                                                 <div class="comment-top__item one-comment__author bolder">Kurt Thompson</div>
@@ -238,6 +245,11 @@
                                             </div>
                                             <div class="one-comment__info-middle">
                                                 <div class="one-comment__text">Each day I love you more my blog Today more than yesterday and less than tomorrow...</div>
+                                                <textarea class="one-comment__textarea hidden">Each day I love you more my blog Today more than yesterday and less than tomorrow...</textarea>
+                                                <div class="one-comment__edit-items hidden">
+                                                    <button class="one-comment__edit-cancel">&#10005; Cancel</button>
+                                                    <button class="one-comment__edit-confirm accent-btn">Save</button>
+                                                </div>
                                             </div>
                                             <div class="one-comment__info-bottom">
                                                 <button class="one-comment__edit-wrap one-comment__info-item">
@@ -288,6 +300,7 @@
                                         </div>
                                     </div>
                                     <div class="one-comment__right-wrap">
+                                        <input type="hidden" name="commentId" value="">
                                         <div class="one-comment__info">
                                             <div class="one-comment__info-top">
                                                 <div class="comment-top__item one-comment__author bolder">Purificacion Rojas</div>
@@ -300,6 +313,11 @@
                                             </div>
                                             <div class="one-comment__info-middle">
                                                 <div class="one-comment__text">WordPress is not responsible for people falling in love with blogging!</div>
+                                                <textarea class="one-comment__textarea hidden">WordPress is not responsible for people falling in love with blogging!</textarea>
+                                                <div class="one-comment__edit-items hidden">
+                                                    <button class="one-comment__edit-cancel">&#10005; Cancel</button>
+                                                    <button class="one-comment__edit-confirm accent-btn">Save</button>
+                                                </div>
                                             </div>
                                             <div class="one-comment__info-bottom">
                                                 <button class="one-comment__reply-wrap one-comment__info-item">
@@ -317,6 +335,7 @@
                                         </div>
                                     </div>
                                     <div class="one-comment__right-wrap">
+                                        <input type="hidden" name="commentId" value="">
                                         <div class="one-comment__info">
                                             <div class="one-comment__info-top">
                                                 <div class="comment-top__item one-comment__author bolder">Phillip Lynch</div>
@@ -329,6 +348,11 @@
                                             </div>
                                             <div class="one-comment__info-middle">
                                                 <div class="one-comment__text">It is hard to defeat WordPress as a blogging tool.</div>
+                                                <textarea class="one-comment__textarea hidden">It is hard to defeat WordPress as a blogging tool.</textarea>
+                                                <div class="one-comment__edit-items hidden">
+                                                    <button class="one-comment__edit-cancel">&#10005; Cancel</button>
+                                                    <button class="one-comment__edit-confirm accent-btn">Save</button>
+                                                </div>
                                             </div>
                                             <div class="one-comment__info-bottom">
                                                 <button class="one-comment__reply-wrap one-comment__info-item">
@@ -338,9 +362,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="load-more__wrap">
-                                <button class="load-more__btn">load more comments</button>
-                            </div>
+                        </div>
+                        <div class="load-more__wrap">
+                            <button class="load-more__btn">load more comments</button>
                         </div>
                     </div>
                 </section>

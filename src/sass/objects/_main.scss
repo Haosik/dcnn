@@ -243,48 +243,50 @@ p.with-img {
   img {
     display: inline-block;
     vertical-align: middle;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.accent-btn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
+  height: 44px;
+  padding: 0 50px;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: "Stag", serif;
+  color: $default;
+  border: none;
+  border-radius: 6px;
+  background-color: $accent;
+  outline: none;
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: width 0.2s ease-out;
+  }
+  &:hover:before,
+  &:focus:before {
+    width: 100%;
+  }
+  &:active {
+    transform: translateY(1px);
   }
 }
 
 .send-btn__wrap {
   padding: 11px 0;
   text-align: right;
-  .send-btn {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    vertical-align: top;
-    height: 44px;
-    padding: 0 50px;
-    font-weight: 500;
-    font-size: 17px;
-    font-family: "Stag", serif;
-    color: $default;
-    border: none;
-    border-radius: 6px;
-    background-color: $accent;
-    outline: none;
-    cursor: pointer;
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      left: 0;
-      top: 0;
-      width: 0;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.3);
-      transition: width 0.2s ease-out;
-    }
-    &:hover:before,
-    &:focus:before {
-      width: 100%;
-    }
-    &:active {
-      transform: translateY(1px);
-    }
-  }
 }
 
 .one-comment {
@@ -292,7 +294,6 @@ p.with-img {
     margin: 40px 0;
   }
   &__box {
-
     font-size: 0;
   }
   &__avatar-wrap {
@@ -316,6 +317,7 @@ p.with-img {
     }
     &-middle {
       display: table;
+      width: 100%;
     }
     &-bottom {
       font-size: 15px;
@@ -350,6 +352,50 @@ p.with-img {
     display: table-cell;
     vertical-align: middle;
     height: 46px;
+    width: 100%;
+    &.hidden {
+      display: none;
+    }
+  }
+  &__textarea {
+    display: block;
+    width: 100%;
+    height: 88px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 2px solid #ebedee;
+    border-radius: 6px;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s;
+    &.hidden {
+      display: none;
+    }
+    &:focus {
+      border-color: $gray;
+    }
+  }
+  &__edit-items {
+    display: block;
+    padding: 0 0 5px;
+    text-align: right;
+    &.hidden {
+      display: none;
+    }
+    button {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &__edit-cancel {
+    margin-right: 15px;
+    color: $gray;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    &:hover {
+      color: $default;
+    }
   }
 }
 
@@ -365,9 +411,6 @@ p.with-img {
   &__wrap {
     margin-top: 30px;
     font-size: 0;
-    /*&:first-child {
-      margin-top: 20px;
-    }*/
   }
   &__avatar-wrap {
     display: inline-block;

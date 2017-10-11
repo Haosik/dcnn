@@ -50,7 +50,7 @@ html
 							textarea(name="newCommentText", placeholder="Your Message").leave-comment__textarea
 							input(type="hidden" name="nickName" value="noobbaster")
 							.send-btn__wrap
-								button(type="submit").send-btn Send
+								button(type="submit").send-btn.accent-btn Send
 						.all-comments__wrap
 							.one-comment__wrap
 								.one-comment__box.clearfix
@@ -58,6 +58,7 @@ html
 										.comments-avatar.avatar--big.my-avatar
 											img(src="images/avatar_placeholder.jpg", alt="Avatar of author")
 									.one-comment__right-wrap
+										input(type="hidden", name="commentId" value="")
 										.one-comment__info
 											.one-comment__info-top 
 												.comment-top__item.one-comment__author.bolder Kurt Thompson
@@ -68,6 +69,10 @@ html
 													span.bolder.article-info__date 13:57
 											.one-comment__info-middle
 												.one-comment__text If not everyone makes money blogging, why is blogging so popular?
+												textarea.one-comment__textarea.hidden If not everyone makes money blogging, why is blogging so popular?
+												.one-comment__edit-items.hidden
+													button.one-comment__edit-cancel &#10005; Cancel
+													button.one-comment__edit-confirm.accent-btn Save
 											.one-comment__info-bottom
 												button.one-comment__edit-wrap.one-comment__info-item
 													i.fa.fa-pencil-square-o
@@ -139,6 +144,7 @@ html
 										.comments-avatar.avatar--big.my-avatar
 											img(src="images/avatar_placeholder.jpg", alt="Avatar of author")
 									.one-comment__right-wrap
+										input(type="hidden", name="commentId" value="")
 										.one-comment__info
 											.one-comment__info-top 
 												.comment-top__item.one-comment__author.bolder Kurt Thompson
@@ -149,6 +155,10 @@ html
 													span.bolder.article-info__date 13:59
 											.one-comment__info-middle
 												.one-comment__text Each day I love you more my blog Today more than yesterday and less than tomorrow...
+												textarea.one-comment__textarea.hidden Each day I love you more my blog Today more than yesterday and less than tomorrow...
+												.one-comment__edit-items.hidden
+													button.one-comment__edit-cancel &#10005; Cancel
+													button.one-comment__edit-confirm.accent-btn Save
 											.one-comment__info-bottom
 												button.one-comment__edit-wrap.one-comment__info-item
 													i.fa.fa-pencil-square-o
@@ -184,6 +194,7 @@ html
 										.comments-avatar.avatar--big.my-avatar
 											img(src="images/other-avatar-2.jpg", alt="Avatar of author")
 									.one-comment__right-wrap
+										input(type="hidden", name="commentId" value="")
 										.one-comment__info
 											.one-comment__info-top 
 												.comment-top__item.one-comment__author.bolder Purificacion Rojas
@@ -194,6 +205,10 @@ html
 													span.bolder.article-info__date 13:59
 											.one-comment__info-middle
 												.one-comment__text WordPress is not responsible for people falling in love with blogging!
+												textarea.one-comment__textarea.hidden WordPress is not responsible for people falling in love with blogging!
+												.one-comment__edit-items.hidden
+													button.one-comment__edit-cancel &#10005; Cancel
+													button.one-comment__edit-confirm.accent-btn Save
 											.one-comment__info-bottom
 												button.one-comment__reply-wrap.one-comment__info-item
 													i.fa.fa-reply
@@ -204,6 +219,7 @@ html
 										.comments-avatar.avatar--big.my-avatar
 											img(src="images/other-avatar-3.jpg", alt="Avatar of author")
 									.one-comment__right-wrap
+										input(type="hidden", name="commentId" value="")
 										.one-comment__info
 											.one-comment__info-top 
 												.comment-top__item.one-comment__author.bolder Phillip Lynch
@@ -214,11 +230,15 @@ html
 													span.bolder.article-info__date 13:59
 											.one-comment__info-middle
 												.one-comment__text It is hard to defeat WordPress as a blogging tool.
+												textarea.one-comment__textarea.hidden It is hard to defeat WordPress as a blogging tool.
+												.one-comment__edit-items.hidden
+													button.one-comment__edit-cancel &#10005; Cancel
+													button.one-comment__edit-confirm.accent-btn Save
 											.one-comment__info-bottom
 												button.one-comment__reply-wrap.one-comment__info-item
 													i.fa.fa-reply
 													| Reply
-							.load-more__wrap
-								button.load-more__btn load more comments
+						.load-more__wrap
+							button.load-more__btn load more comments
 
 		include ./includes/footer.pug
