@@ -137,6 +137,7 @@ p.with-img {
     font-size: 0;
     border: 5px solid $separator;
     transition: opacity 0.3s;
+    outline-color: $gray;
     &:hover {
       opacity: 0.8;
     }
@@ -218,6 +219,7 @@ p.with-img {
     border-radius: 6px;
     resize: none;
     outline: none;
+    overflow-y: auto;
     transition: border-color 0.3s ease-in;
     &:focus {
       border-color: $gray;
@@ -230,7 +232,6 @@ p.with-img {
   vertical-align: top;
   width: 68px;
   height: 68px;
-  line-height: 60px;
   padding: 2px;
   text-align: center;
   border: 2px solid #ebedee;
@@ -238,7 +239,6 @@ p.with-img {
   &.avatar--big {
     width: 88px;
     height: 88px;
-    line-height: 80px;
   }
   img {
     display: inline-block;
@@ -498,7 +498,7 @@ p.with-img {
     border: 2px solid #f2f2f2;
     background: transparent;
     cursor: pointer;
-    outline: none;
+    outline-color: $gray;
     overflow: hidden;
     &:before {
       content: '';
@@ -511,8 +511,7 @@ p.with-img {
       background-color: #ffd800;
       transition: height 0.2s ease-in;
     }
-    &:hover:before,
-    &:focus:before {
+    &:hover:before {
       height: 100%;
     }
     &:active {

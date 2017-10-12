@@ -1,9 +1,20 @@
 ;
 $(document).ready(function() {
 
+  // Magnific popup
+  $('.with-img .float-link').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    mainClass: 'mfp-img-mobile',
+    image: {
+      verticalFit: true
+    }
+
+  });
+
   // Scroll to comments
-  var commentsOffTop = $('.comments-wrap').offset().top;
   $('.article-info__comments').on('click', function(e) {
+    var commentsOffTop = $('.comments-wrap').offset().top;
     e.preventDefault();
     $('html, body').stop().animate({ scrollTop: commentsOffTop }, 400)
   })
@@ -173,13 +184,16 @@ $(document).ready(function() {
   $(".leave-comment__form").on('submit', function(e) {
     e.preventDefault();
     var leaveCommentText = $('.leave-comment__textarea').val();
-    $.post(ajaxUrl, {
-        content: leaveCommentText
-      },
-      function(data, status) {
-        console.log("Data: " + data + "Status: " + status);
-        getLastComment();
-      });
+    if (leaveCommentText != '') {
+      $.post(ajaxUrl, {
+          content: leaveCommentText
+        },
+        function(data, status) {
+          console.log("Data: " + data + "Status: " + status);
+          getLastComment();
+        });
+    }
+    $('.leave-comment__textarea').val('');
   });
 
 
@@ -217,6 +231,7 @@ $(document).ready(function() {
       },
       callback: function(respData) {
         console.log(JSON.parse(respData));
+        getComments(currentComments);
       }
     })
   };
@@ -240,8 +255,9 @@ $(document).ready(function() {
 
     editComment(commentId, text);
     $('.all-comments__wrap').html("");
-    getComments(currentComments);
   });
 
-
+  if (document.body.classList.contains('only-ajax-comments')) {
+    getFiveComments();
+  }
 });
